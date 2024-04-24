@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Search Results for "<%= query %>"</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books">Books</a></li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/featured">Featured</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <% if (searchResults.length > 0) { %>
+            <ul>
+                <% searchResults.forEach(function(book) { %>
+                    <li>
+                        <h2><%= book.title %></h2>
+                        <p>Author: <%= book.author %></p>
+                        <p>ISBN: <%= book.isbn %></p>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>No results found for "<%= query %>".</p>
+        <% } %>
+    </main>
+
+    <footer>
+        <p>Library Management System © 2024</p>
+    </footer>
+</body>
+</html>

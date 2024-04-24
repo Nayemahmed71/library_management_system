@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Books</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loan Books to Members</h1>
+        <nav>
+	    <ul>
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/manage-books">Manage Books</a></li>
+                <li><a href="/register-member">Register Member</a></li>
+                <li><a href="/loan-books">Loan Books</a></li>
+		<li><a href="/featured">Featured Books</a></li>
+	   </ul>
+       </nav>
+    </header>
+    <main>
+        <h2>Loan a Book</h2>
+        <form action="/loan-books" method="post">
+            <div class="form-group">
+                <label for="bookId">Book ID:</label>
+                <input type="number" id="bookId" name="bookId" placeholder="Book ID" required>
+            </div>
+            <div class="form-group">
+                <label for="memberId">Member ID:</label>
+                <input type="number" id="memberId" name="memberId" placeholder="Member ID" required>
+            </div>
+            <div class="form-group">
+                <label for="loan_date">Loan Date:</label>
+                <input type="date" id="loan_date" name="loan_date" placeholder="Loan Date">
+            </div>
+            <div class="form-group">
+                <label for="return_date">Return Date:</label>
+                <input type="date" id="return_date" name="return_date" placeholder="Return Date">
+            </div>
+            <button type="submit">Issue Loan</button>
+        </form>
+    </main>
+    <footer>
+        <p>Library Management System © 2024</p>
+    </footer>
+</body>
+</html>

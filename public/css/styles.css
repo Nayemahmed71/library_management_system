@@ -1,0 +1,127 @@
+/* Basic Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #660202;
+  color: #680000;
+  font-size: 16px;
+  background-image: url('/20230711_000445.jpg'); /* Update the path to the image */
+  background-size: cover; /* Cover the entire body */
+  background-position: cover; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+header, nav, main {
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Navigation Styles */
+nav {
+  background: #790101;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
+
+/* Main Content and Footer */
+main {
+  min-height: 40px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  position: fixed;
+  left:0;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Adjust based on your footer's height */
+  background: #242323; /* Your background */
+  color: white; /* Your text color */
+  text-align: center;
+}
+
+
+footer p {
+  margin: 0;
+  font-size: 12x;
+}
+
+/* Responsive Typography */
+h1, h2, h3 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Utility Classes */
+.container {
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .container, header, nav, main, footer {
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5em;
+  }
+}

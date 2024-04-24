@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Books</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+         <h1>Library Management System - Featured Books</h1>
+	<nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+    		<li><a href="/manage-books">Manage Books</a></li>
+    		<li><a href="/register-member">Register Member</a></li>
+    		<li><a href="/loan-books">Loan Books</a></li>
+   		<li><a href="/featured">Featured Books</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Featured Books</h1>
+        <div id="featured-books-list">
+            <% if (featuredBooks && featuredBooks.length > 0) { %>
+                <% featuredBooks.forEach(function(book) { %>
+                    <div class="book">
+                        <h3><%= book.title %></h3>
+                        <p>Author: <%= book.author %></p>
+                        <!-- Include other book details you want to show -->
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No featured books to display.</p>
+            <% } %>
+        </div>
+    </main>
+    <footer>
+        <p>Library Management System © 2024</p>
+    </footer>
+</body>
+</html>
